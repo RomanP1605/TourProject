@@ -1,0 +1,25 @@
+header{
+    font-family: 'Pangolin';
+    background-color: black;
+    img{
+        width: 200px;
+        height: 60px;
+    }
+}
+body{
+    color: white;
+    font-family: 'Pangolin';
+    width: 100%;
+    .cover-container{
+        font-family: 'Pangolin';
+    }
+}
+footer{
+    background-color: black;
+    color: white;
+    font-family: 'Pangolin';
+    img{
+        width: 200px;
+        height: 60px;
+    }
+}
