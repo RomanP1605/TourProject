@@ -5,14 +5,19 @@ header{
         width: 200px;
         height: 60px;
     }
+    .profile-settings{
+        margin-right: 20px;
+    }
 }
 body{
     color: white;
     font-family: 'Pangolin';
     width: 100%;
+    height: 100%;
     .cover-container{
         font-family: 'Pangolin';
     }
+
 }
 footer{
     background-color: black;
@@ -21,5 +26,11 @@ footer{
     img{
         width: 200px;
         height: 60px;
+    }
+    .social-medias{
+        img{
+            width: 30px;
+            height: 30px;
+        }
     }
 }

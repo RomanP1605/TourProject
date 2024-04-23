@@ -118,10 +118,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = ["TourSite/static"]
-MEDIA_URL = "media/"
-MEDIA_ROOT = "media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "TourSite.User"
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = "media/"

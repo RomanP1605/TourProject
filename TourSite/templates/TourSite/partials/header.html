@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <svg class="bi" width="40" height="32" role="img" aria-label="Logo"><img src="/static/TourSite/img/logo.png"></svg>
+        </a>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2">Головна</a></li>
+        <li><a href="/news" class="nav-link px-2">Новини</a></li>
+        <li><a href="/tours" class="nav-link px-2">Тури</a></li>
+        <li><a href="/about" class="nav-link px-2">Про нас</a></li>
+          <li><a href="/rates" class="nav-link px-2">Відгуки</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end profile-settings">
+          {% if request.user.is_authenticated %}
+          <a href="/profile"><button type="button" class="btn btn-primary">{{ request.user.first_name }}</button></a>
+          {% else %}
+        <a href="/signin"><button type="button" class="btn btn-outline-primary me-2">Увійти</button></a>
+        <a href="/signup"><button type="button" class="btn btn-primary">Зареєструватись</button></a>
+          {% endif %}
+      </div>
+    </header>
