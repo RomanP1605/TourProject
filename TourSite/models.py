@@ -141,7 +141,7 @@ class Rate(models.Model):
             MinValueValidator(1)
         ]
     )
-    comment = models.CharField(max_length=512)
+    comment = models.CharField(max_length=512, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

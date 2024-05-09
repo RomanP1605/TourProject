@@ -5,6 +5,7 @@ from django.contrib.auth import login
 from django.http import HttpResponse
 from .models import User, Tours, News, Rate, Books
 from .forms import SignupForm, LoginForm, AddRateForm, BookForm
+from django.contrib.auth import logout
 
 
 # Create your views here.
@@ -81,4 +82,9 @@ class BookView(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         form.save()
-        return HttpResponse("Ви успішно забронювали тур! Через деякий час вам зателефонують для уточнення деталей!<a href="/">повернутись на головну сторінку</a>")
+        return HttpResponse("Ви успішно забронювали тур! Через деякий час вам зателефонують для уточнення деталей!<a href='/'>повернутись на головну сторінку</a>")
+
+
+def logout_view(request):
+    logout(request)
+    return render(request, template_name="TourSite/main-page.html")
